@@ -1,0 +1,81 @@
+.homePage-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center;
+    gap: 2rem; */
+}
+
+.vehicle-card {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #f9f9f9, #ffffff);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    max-width: 380px;
+    margin: 20px;
+    border: 1px solid #e0e0e0;
+    position: relative;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.1);
+}
+
+.vehicle-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.vehicle-card:hover .vehicle-img {
+    transform: scale(1.05);
+}
+
+.vehicle-info {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.vehicle-card h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 0.3rem;
+}
+
+.vehicle-card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+.vehicle-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #2ecc71;
+    margin-top: 0.5rem;
+}
+
+.availability-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 50px;
+    text-transform: uppercase;
+    background-color: #e74c3c;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.availability-badge.available {
+    background-color: #2ecc71;
+}
