@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom"
-
+import SearchBar from "./SearchBar"
 
 export default function Header() {
 
@@ -12,6 +12,7 @@ export default function Header() {
                 <NavLink to='/'>
                     Homepage
                 </NavLink>
+                <SearchBar />
             </nav>
         </div>
     )
