@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 
 import { Link, useParams, useNavigate } from "react-router-dom";
 import '../style/DetailPage.css'
+import BookingForm from "../components/BookingForm";
 
 const DetailPage = () => {
 
@@ -11,7 +12,7 @@ const DetailPage = () => {
     const { id } = useParams();
 
     // utilizzo il reedirect
-    const redirect = useNavigate();
+    // const redirect = useNavigate();
 
     // settiamo lo stato del componente
     const [vehicle, setVehicle] = useState([]);
@@ -53,14 +54,16 @@ const DetailPage = () => {
 
                     <div className="vehicle-details">
                         <p><strong>Tipo:</strong> {vehicle.type}</p>
-                        <p><strong>Targa:</strong> {vehicle.plate}</p>
+                        <p>{vehicle.type !== 'Bike' ? (<><strong>Targa:</strong> {vehicle.plate}</>) : null}</p>
                         <p className="description">{vehicle.description}</p>
                         <p className="price"><strong>Prezzo:</strong> €{vehicle.price_per_day}/giorno</p>
                     </div>
 
                     <Link to="/" className="back-home">← Torna alla Home</Link>
+
                 </div>
             </div>
+            <BookingForm vehicleId={vehicle.id} />
         </div>
     )
 }

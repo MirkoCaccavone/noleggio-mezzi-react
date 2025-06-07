@@ -14,7 +14,7 @@ const VehicleCard = ({ vehicle }) => {
             <div className="vehicle-info">
                 <h2>{vehicle.brand} {vehicle.model}</h2>
                 <p><strong>Tipo:</strong> {vehicle.type}</p>
-                <p><strong>Targa:</strong> {vehicle.plate}</p>
+                <p>{vehicle.type !== 'Bike' ? (<><strong>Targa:</strong> {vehicle.plate}</>) : null}</p>
                 <p>{vehicle.description}</p>
                 <div className="vehicle-price">€{vehicle.price_per_day} / giorno</div>
                 <Link to={`/vehicles/${vehicle.id}`}>Vai al dettaglio</Link>

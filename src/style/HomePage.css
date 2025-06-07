@@ -1,11 +1,12 @@
 .homePage-container {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center;
-    gap: 2rem; */
+    justify-content: center;
+    gap: 2rem;
 }
 
 .vehicle-card {
+    width: 350px;
     display: flex;
     flex-direction: column;
     background: linear-gradient(135deg, #f9f9f9, #ffffff);
