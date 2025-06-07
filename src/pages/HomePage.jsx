@@ -2,6 +2,8 @@ import axios from "axios"
 
 import { useState, useEffect } from "react"
 import VehicleCard from "../components/VehicleCard";
+import Jumbo from "../components/Jumbo";
+
 
 import '../style/HomePage.css';
 
@@ -25,14 +27,18 @@ const HomePage = () => {
 
 
     return (
-        <div className="homePage-container">
-            {vehicles.map((vehicle) => (
-                <VehicleCard
-                    key={vehicle.id}
-                    vehicle={vehicle}
-                />
-            ))}
-        </div>
+        <>
+            <Jumbo />
+            <div className="homePage-container">
+                {vehicles.map((vehicle) => (
+                    <VehicleCard
+                        key={vehicle.id}
+                        vehicle={vehicle}
+                    />
+                ))}
+            </div>
+        </>
+
     )
 }
 
