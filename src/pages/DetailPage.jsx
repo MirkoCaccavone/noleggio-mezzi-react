@@ -55,8 +55,8 @@ const DetailPage = () => {
                     <div className="vehicle-details">
                         <p><strong>Tipo:</strong> {vehicle.type}</p>
                         <p>{vehicle.type !== 'Bike' ? (<><strong>Targa:</strong> {vehicle.plate}</>) : null}</p>
-                        <p className="description">{vehicle.description}</p>
-                        <p className="price"><strong>Prezzo:</strong> €{vehicle.price_per_day}/giorno</p>
+                        <p className="description"><strong>Descrizione:</strong> {vehicle.description}</p>
+                        <p className="detail-price"><strong>Prezzo:</strong> €{vehicle.price_per_day}/giorno</p>
                     </div>
 
                     <Link to="/" className="back-home">← Torna alla Home</Link>

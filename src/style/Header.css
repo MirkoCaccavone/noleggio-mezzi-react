@@ -1,0 +1,111 @@
+/* HEADER CONTAINER */
+.header-container {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    background-color: #f5f7fa;
+    border-bottom: 2px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* LOGO */
+.logo-header {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* NAV */
+.header-container nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 4rem;
+    gap: 1.5rem;
+}
+
+/* NAVLINK */
+.header-container nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
+    padding: 0.3rem;
+    transition: color 0.3s ease;
+}
+
+.header-container nav a:hover,
+.header-container nav a.active {
+    color: #0077cc;
+}
+
+/* SEARCH BAR */
+.header-container form {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header-container input[type="text"] {
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+    background-color: #fff;
+    color: #333;
+    outline: none;
+    width: 250px;
+    transition: border-color 0.3s;
+}
+
+.header-container input[type="text"]::placeholder {
+    color: #888;
+}
+
+.header-container input[type="text"]:focus {
+    border-color: #0077cc;
+}
+
+.header-container button {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.header-container button:hover {
+    background-color: #005fa3;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .header-container nav {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .header-container form {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .header-container input[type="text"],
+    .header-container button {
+        width: 100%;
+    }
+}

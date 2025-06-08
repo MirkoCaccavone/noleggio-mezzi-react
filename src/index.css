@@ -4,15 +4,6 @@
   padding: 0;
 }
 
-.header-container {
-  background-color: red;
-  display: flex;
-}
-
-.footer-container {
-  background-color: red;
-}
-
 .jumbo-container {
   height: 55vh;
 }
@@ -23,31 +14,6 @@
 
 }
 
-.results-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
-
-/* Esempio base */
-form {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-input[type="text"] {
-  padding: 8px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-button {
-  padding: 8px 12px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+.footer-container {
+  background-color: red;
 }

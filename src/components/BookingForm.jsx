@@ -59,10 +59,27 @@ const BookingForm = ({ vehicleId }) => {
         <form className="booking-form" onSubmit={handleSubmit}>
             <h2>Prenota il tuo veicolo</h2>
 
-            <input type="text" name="customer_name" placeholder="Nome e Cognome" onChange={handleChange} required />
-            <input type="email" name="customer_email" placeholder="Email" onChange={handleChange} required />
-            <input type="date" name="start_date" onChange={handleChange} required />
-            <input type="date" name="end_date" onChange={handleChange} required />
+            <div className="form-group">
+                <label htmlFor="customer_name">Nome e Cognome</label>
+                <input type="text" id="customer_name" name="customer_name" onChange={handleChange} required />
+            </div>
+
+            <div className="form-group">
+                <label htmlFor="customer_email">Email</label>
+                <input type="email" id="customer_email" name="customer_email" onChange={handleChange} required />
+            </div>
+
+            <div className="form-row">
+                <div className="form-group">
+                    <label htmlFor="start_date">Data inizio</label>
+                    <input type="date" id="start_date" name="start_date" onChange={handleChange} required />
+                </div>
+
+                <div className="form-group">
+                    <label htmlFor="end_date">Data fine</label>
+                    <input type="date" id="end_date" name="end_date" onChange={handleChange} required />
+                </div>
+            </div>
 
             <button type="submit">Prenota</button>
 

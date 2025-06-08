@@ -25,7 +25,7 @@ export default function SearchBar() {
         <form onSubmit={handleSubmit}>
             <input
                 type="text"
-                placeholder="Cerca i tuoi prodotti..."
+                placeholder="Cerca il veicolo adatto a te..."
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
             />
